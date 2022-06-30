@@ -21,3 +21,13 @@ Use Unity version 2021.3.1f1 - same as boilerplate
 *Linux is a possibility but I have not tried it 
 
 Highly recommend using Visual Studio 2022 as it has great support for Unity code development in C# [Quickstart: Configure Visual Studio for cross-platform development with Unity](https://docs.microsoft.com/en-us/visualstudio/gamedev/unity/get-started/getting-started-with-visual-studio-tools-for-unity?pivots=windows)
+
+## Getting started
+
+Clone this repo and add the root folder to Unity Hub.
+![addtouity](AddToUnityHub.jpg)
+
+It will take a while to open the first time as it will collect the packages and build files the project needs that are not included in the repo.
+Once open, the scene may be called "Untitled" and empty. Navigate to "SampleScene" where I have made a simple scene. Explore here, experiment, break it. 
+Use the play arrow at the top the start the game and again to stop it. 
+![scene](sample.jpg)
