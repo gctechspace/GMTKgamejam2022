@@ -13,6 +13,22 @@ The [GMTK Game Jam](https://itch.io/jam/gmtk-2021) is an annual game making mara
 We will be using Unity game engine to build our game. A basic build is attached in this repo.
 Submissions are required to run in the browser or on Windows and be less then 1GB when submitted to itch.io
 
+## FAQs
+
+Q: I've never have created a game, what skills I can bring?
+
+A: Building a game requires creativity and many disciplines.  Any knowledge of design, art, coding, math, music, sound design, etc will be useful. 
+
+Q: I don't have time to be at a 48 hour game jam.
+
+A: That is not a question. You can come and go as you please. Any level of contribution is welcome.
+
+Q: What do I need to bring?
+
+A: Nothing....but a laptop would be good. 
+
+
+
 ## Framework links and downloads: 
 Use Unity version 2021.3.1f1 - same as boilerplate
 [Unity account signup **free**](https://store.unity.com/front-page?check_logged_in=1#plans-individual)
