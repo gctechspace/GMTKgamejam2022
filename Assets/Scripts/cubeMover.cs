@@ -11,6 +11,7 @@ public class cubeMover : MonoBehaviour
     float forward;
     float rotation;
     private Rigidbody RB;
+    public bool isGrounded;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class cubeMover : MonoBehaviour
 
         
 
-		if (Input.GetButtonDown("Jump"))
+		if (Input.GetButtonDown("Jump") && isGrounded)
 		{
             jump();
 		}
@@ -43,16 +44,32 @@ public class cubeMover : MonoBehaviour
     }
 	private void FixedUpdate()
 	{
-        // transform.position = transform.position + transform.forward * speed * forward * Time.deltaTime;  //deltaTime keeps actions timing consitant in realation to framerate 
-        RB.AddForce(rotation * speed * Time.deltaTime, 0, speed * forward * Time.deltaTime);
+		if (isGrounded)
+		{
+            RB.AddForce(rotation * speed * Time.deltaTime, 0, speed * forward * Time.deltaTime);
 
-
-        //transform.Rotate(Vector3.up * rotation * rotationSpeed * Time.deltaTime); //method that rotates around axis(up or Y in this case)
+        }
 
     }
     void jump()
 	{
-        //RB.velocity = new Vector3(RB.velocity.x, jumpForce, RB.velocity.z);
         RB.AddForce(0, jumpForce, 0);
+    }
+
+	private void OnCollisionStay(Collision collision)
+	{
+        if(collision.gameObject.tag == "ground")
+		{
+            isGrounded = true;
+        }
+        
+	}
+
+	private void OnCollisionExit(Collision collision)
+	{
+        if (collision.gameObject.tag == "ground")
+        {
+            isGrounded = false;
+        }
     }
 }
