@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformGenerator : MonoBehaviour
 {
     public GameObject PlatformPrefab;
-    public int NumberOfObjectsToSpawn = 15;
+    public int NumberOfObjectsToSpawn = 38;
     private int nextAngle = -120;
     private float height = 0.8f;
 

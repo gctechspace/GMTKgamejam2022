@@ -44,6 +44,7 @@ public class Spawner : MonoBehaviour
             timeRemaining -= Time.deltaTime;
         } else {
             resetTimer();
+            Prefab = utility.randomdice();
             Instantiate(Prefab, transform.position, Quaternion.identity);
             NumberOfObjectsToSpawn--;
             if (NumberOfObjectsToSpawn <= 0) {
