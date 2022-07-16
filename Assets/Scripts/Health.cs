@@ -9,6 +9,8 @@ public class Health : MonoBehaviour
 
     public Slider Slider;
 
+    public int Vulnerability = 2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class Health : MonoBehaviour
         int m = (int)collision.relativeVelocity.magnitude;
         Debug.Log("Collision detected with magnitude: " + m);
 
-        if (m > 2) {
+        if (m > Vulnerability) {
             Level -= m;
         }
 
