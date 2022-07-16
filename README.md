@@ -7,7 +7,7 @@ Readme status: Incomplete
 GC TechSpace quite-room, workshop and remote (Slack/Discord).
 
 ## Info:
-The [GMTK Game Jam](https://itch.io/jam/gmtk-2021) is an annual game making marathon, where individuals and teams try to make a game that fits a theme, in just 48 hours.
+The [GMTK Game Jam](https://itch.io/jam/gmtk-jam-2022) is an annual game making marathon, where individuals and teams try to make a game that fits a theme, in just 48 hours.
 *The theme will be announced at the start of the jam.*
 
 We will be using Unity game engine to build our game. A basic build is attached in this repo.
