@@ -1,14 +1,45 @@
 # GC TechSpace entry for the GMTK Game Jam
 
-current participants
+Participants
+* Heath
+* Jerome
+* David
+* Skip
 
 
 ## Work Allocation
 * Heath - Engine
 * Jerome - Graphics
-* David - Logos,Paperwork, itch.io submit requirements, splash page
+* David - Logos, Paperwork, itch.io submit requirements, splash page
 * Skip - TBA
 
+# Decisions
+* Font Family - Indy Flower and Bangers
+
+
+# TimeLine
+## Saturday
+- Morning 
+  - Devlop Game Idea
+  - Scafolding
+  - Basic Phyics
+- Afternnon
+  - Details
+  - Add Audio
+- Evening
+  - TBA
+
+## Sunday
+- Morning
+  - ABC
+- Afternoon
+  - Submit Draft
+  - Debug Game
+  - Submit Final
+  
+# Game Overview
+
+---
 
 Readme status: Incomplete  
 ## When:  Saturday July 16th, 02:30AM to Monday July 18th, 02:30AM -48 hours -
