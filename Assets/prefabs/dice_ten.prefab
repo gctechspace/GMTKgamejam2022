@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4394708946708623202}
   m_Layer: 0
   m_Name: dice_ten
-  m_TagString: Untagged
+  m_TagString: dice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2618337739803808417}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8da2e39a8ce1fbc4793c6d336358ab7c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
