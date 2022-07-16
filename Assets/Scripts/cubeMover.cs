@@ -12,6 +12,7 @@ public class cubeMover : MonoBehaviour
     float rotation;
     private Rigidbody RB;
     public bool isGrounded;
+    public Transform playerCam;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +47,10 @@ public class cubeMover : MonoBehaviour
 	{
 		if (isGrounded)
 		{
-            RB.AddForce(rotation * speed * Time.deltaTime, 0, speed * forward * Time.deltaTime);
+            // RB.AddForce(rotation * speed * Time.deltaTime, 0, speed * forward * Time.deltaTime);
+
+            RB.AddForce(playerCam.right * rotation * speed * Time.deltaTime);
+            RB.AddForce(playerCam.forward * forward * speed * Time.deltaTime);
 
         }
 
