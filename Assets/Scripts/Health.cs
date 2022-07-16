@@ -25,7 +25,10 @@ public class Health : MonoBehaviour
 
     void OnCollisionEnter(Collision collision) {
         int m = (int)collision.relativeVelocity.magnitude;
+
+        //Debug.Log("Collided with: " + collision.gameObject.tag);
         Debug.Log("Collision detected with magnitude: " + m);
+
 
         if (m > Vulnerability) {
             Level -= m;
