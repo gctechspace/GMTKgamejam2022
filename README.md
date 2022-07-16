@@ -6,7 +6,7 @@ current participants
 ## Work Allocation
 * Heath - Engine
 * Jerome - Graphics
-* David - Logos,Paperwork
+* David - Logos,Paperwork, itch.io submit requirements, splash page
 * Skip - TBA
 
 
