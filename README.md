@@ -1,4 +1,15 @@
 # GC TechSpace entry for the GMTK Game Jam
+
+current participants
+
+
+## Work Allocation
+* Heath - Engine
+* Jerome - Graphics
+* David - Logos,Paperwork
+* Skip - TBA
+
+
 Readme status: Incomplete  
 ## When:  Saturday July 16th, 02:30AM to Monday July 18th, 02:30AM -48 hours -
 ### NOTE* We will be starting at a reasonable time on Saturday morning and finishing late Sunday.  Team members are welcome to come and go over the weekend.
