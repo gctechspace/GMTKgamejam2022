@@ -31,7 +31,10 @@ public class PlatformGenerator : MonoBehaviour
                 Instantiate(obj, new Vector3(0, h, 0), Quaternion.Euler(new Vector3(0, -angle, pSlope)));
             } else
             {
-                // utility.random
+               if(utility.randomBoolean())
+                {
+                    Instantiate(obj, new Vector3(0, h, 0), Quaternion.Euler(new Vector3(0, -angle, pSlope)));
+                }
             }
             angle += angleIncrement;
             h += hIncrement;
