@@ -23,7 +23,7 @@ Participants
   - Devlop Game Idea
   - Scafolding
   - Basic Phyics
-- Afternnon
+- Afternoon
   - Details
   - Add Audio
 - Evening
