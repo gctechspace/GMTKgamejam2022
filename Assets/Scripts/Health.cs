@@ -22,10 +22,15 @@ public class Health : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision) {
-        Level -= (int)collision.relativeVelocity.magnitude;
+        int m = (int)collision.relativeVelocity.magnitude;
+        Debug.Log("Collision detected with magnitude: " + m);
+
+        if (m > 2) {
+            Level -= m;
+        }
 
         if (Level <= 0) {
-
+            // TODO: Trigger end of life
         }
     }
 }
