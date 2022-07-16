@@ -5,35 +5,32 @@ using UnityEngine;
 public class PlatformGenerator : MonoBehaviour
 {
     public GameObject[] item;
-    public int NumberOfObjectsToSpawn = 38;
-    private int nextAngle = -120;
-    private float height = 0.8f;
+    public int difficulty = 1;
+    private int NumberOfObjectsToSpawn = 116; // Number of stairs required to reach the tower top
+    private int platformAngleIncrement = 15; // Degrees to rotate each platform object
+    private float platformHieghtIncrement = 0.4f; // Height to increase each platform by
+    private int startAngle = -120; // Starts the objects on the right side of the dice tower
+    private float height = 0.2f; // platform Start height
 
     // Start is called before the first frame update
     void Start()
     {
-
-        /*  for (int i = 0; i < NumberOfObjectsToSpawn; i++)
-          {
-              Instantiate(PlatformPrefab, new Vector3 (0, height, 0), Quaternion.Euler(new Vector3(0, -nextAngle, 0)));
-              nextAngle += 45;
-              height += 1.2f;
-
-          }*/
-
-        generate(item[0], NumberOfObjectsToSpawn, nextAngle, height);  //platform
-        generate(item[1], 30, nextAngle, 8); //torch
-
+        generate(item[0], NumberOfObjectsToSpawn, startAngle, platformAngleIncrement, height, platformHieghtIncrement, difficulty);  //platform
+        generate(item[1], 30, startAngle, 45, 8, 1.2f, 1); //torch (difficulty of 1 ALWAYS places an object)
     }
 
     
-    void generate(GameObject obj, int units, int angle, float h )
+    void generate(GameObject obj, int units, int angle, int angleIncrement, float h, float hIncrement, int difficulty)
 	{
+        int stairGroup = NumberOfObjectsToSpawn / difficulty;
         for (int i = 0; i < units; i++)
         {
-            Instantiate(obj, new Vector3(0, h, 0), Quaternion.Euler(new Vector3(0, -angle, 0)));
-            angle += 45;
-            h += 1.2f;
+            if(i % stairGroup != 0 || i == 0) // Skips a stair every stair group, Higher difficulty more skipped stairs (Never skips 1st stair)
+            {
+                Instantiate(obj, new Vector3(0, h, 0), Quaternion.Euler(new Vector3(0, -angle, 0)));
+            }
+            angle += angleIncrement;
+            h += hIncrement;
 
         }
     }
