@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     public int Damage = 200;
+    public GameObject explosion;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class Bomb : MonoBehaviour
         if (c != null) {
             Debug.Log("Collided with something with the health script attached");
             c.Level -= Damage;
+            Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 
