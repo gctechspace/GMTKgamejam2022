@@ -26,9 +26,15 @@ public class PlatformGenerator : MonoBehaviour
         int stairGroup = NumberOfObjectsToSpawn / difficulty;
         for (int i = 0; i < units; i++)
         {
-            if(i % stairGroup != 0 || i == 0) // Skips a stair every stair group, Higher difficulty more skipped stairs (Never skips 1st stair)
+            if(i % stairGroup > 1 || i == 0) // Skips a stair every stair group, Higher difficulty more skipped stairs (Never skips 1st stair)
             {
                 Instantiate(obj, new Vector3(0, h, 0), Quaternion.Euler(new Vector3(0, -angle, pSlope)));
+            } else
+            {
+               if(utility.randomBoolean())
+                {
+                    Instantiate(obj, new Vector3(0, h, 0), Quaternion.Euler(new Vector3(0, -angle, pSlope)));
+                }
             }
             angle += angleIncrement;
             h += hIncrement;
