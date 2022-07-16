@@ -20,6 +20,10 @@ public static class utility
     {
         return main + UnityEngine.Random.value * offset;
     }
+    public static bool randomBoolean()
+    {
+        return (UnityEngine.Random.value > 0.5f);
+    }
 
     public static GameObject randomdice() {
         GameObject mydice = utility.dicelist.Next();
