@@ -12,12 +12,14 @@ public class cubeMover : MonoBehaviour
     float rotation;
     private Rigidbody RB;
     public bool isGrounded;
+    public int jumpCount;
     public Transform playerCam;
 
     // Start is called before the first frame update
     void Start()
     {
         RB = GetComponent<Rigidbody>();
+        jumpCount = 0;
     }
 
     // Update is called once per frame
@@ -32,7 +34,7 @@ public class cubeMover : MonoBehaviour
 
         
 
-		if (Input.GetButtonDown("Jump") && isGrounded)
+		if (Input.GetButtonDown("Jump") && jumpCount < 1)
 		{
             jump();
 		}
@@ -42,13 +44,17 @@ public class cubeMover : MonoBehaviour
             //requires "using UnityEngine.SceneManagement;
             SceneManager.LoadScene("tower"); //call scene by scene name string
         }
+        if (isGrounded)
+        {
+            jumpCount = 0;
+        }
     }
 	private void FixedUpdate()
 	{
 		if (isGrounded)
 		{
             // RB.AddForce(rotation * speed * Time.deltaTime, 0, speed * forward * Time.deltaTime);
-
+        
             RB.AddForce(playerCam.right * rotation * speed * Time.deltaTime);
             RB.AddForce(playerCam.forward * forward * speed * Time.deltaTime);
 
@@ -58,6 +64,7 @@ public class cubeMover : MonoBehaviour
     void jump()
 	{
         RB.AddForce(0, jumpForce, 0);
+        jumpCount++;
     }
 
 	private void OnCollisionStay(Collision collision)
