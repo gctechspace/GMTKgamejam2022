@@ -21,7 +21,7 @@ public class PlatformGenerator : MonoBehaviour
     {
        // float heightI = 180 / 360 * 9.6f;
         generate(item[0], NumberOfObjectsToSpawn, startAngle, platformAngleIncrement, height, platformHieghtIncrement, platformSlope, difficulty);  //platform
-        generate(item[1], 29, startAngle, 45, 12f, getHeightIncrement(45), 0, 1); //torch (difficulty of 1 ALWAYS places an object) 1.2f
+        generate(item[1], 35, startAngle, 45, 2f, getHeightIncrement(45), 0, 1); //torch (difficulty of 1 ALWAYS places an object) 1.2f
         generate(item[2], 7, startAngle, 180, 10.3f, getHeightIncrement(180), 0, 1); //Paddle 4.8f
     }
 
