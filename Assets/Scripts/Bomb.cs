@@ -10,23 +10,20 @@ public class Bomb : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     void OnCollisionEnter(Collision collision) {
         Health c = (collision.gameObject.GetComponent("Health") as Health);
         if (c != null) {
-            Debug.Log("Collided with something with the health script attached");
             c.Level -= Damage;
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(10, transform.position, 10, 1, ForceMode.VelocityChange);
         }
-
-    }    
+    }
 }
