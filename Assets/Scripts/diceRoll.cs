@@ -32,6 +32,9 @@ public class diceRoll : MonoBehaviour
         global.death = false;
         startButtion.interactable = false;
         Physics.gravity = new Vector3(0, -9.81F, 0);
+        textoutputs[5].text = global.level.ToString();
+        textoutputs[6].text = global.score.ToString();
+        textoutputs[7].text = global.highscore.ToString();
     }
 
     public static float Map(float value, float fromSource, float toSource, float fromTarget, float toTarget)
@@ -47,9 +50,7 @@ public class diceRoll : MonoBehaviour
     }
     public void startGame()
 	{
-        textoutputs[5].text = global.level.ToString();
-        textoutputs[6].text = global.score.ToString();
-        textoutputs[7].text = global.highscore.ToString();
+    
         float levelGravity = Map(constrainNumber(gravity, 1, 10), 1f, 10f, -4.9f, -16.5f);
         Physics.gravity = new Vector3(0, levelGravity, 0);
         SceneManager.LoadScene("SkipTower");
