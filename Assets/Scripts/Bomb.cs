@@ -6,6 +6,7 @@ public class Bomb : MonoBehaviour
 {
     public int Damage = 200;
     public GameObject explosion;
+    public AudioSource explode;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class Bomb : MonoBehaviour
         if (c != null) {
             c.Level -= Damage;
             Instantiate(explosion, transform.position, Quaternion.identity);
+            explode.Play();
             Destroy(gameObject);
             collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(10, transform.position, 10, 1, ForceMode.VelocityChange);
         }
