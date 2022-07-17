@@ -26,6 +26,10 @@ public class diceRoll : MonoBehaviour
 
 	private void Start()
 	{
+        Time.timeScale = 1f;
+        global.winner = false;
+      
+        global.death = false;
         startButtion.interactable = false;
         Physics.gravity = new Vector3(0, -9.81F, 0);
     }
