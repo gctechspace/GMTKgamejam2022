@@ -12,6 +12,7 @@ public class cubeMover : MonoBehaviour
     float rotation;
     private Rigidbody RB;
     public bool isGrounded;
+    public bool isFinished;
     public int jumpCount;
     public Transform playerCam;
 
@@ -73,8 +74,17 @@ public class cubeMover : MonoBehaviour
 		{
             isGrounded = true;
         }
-        
-	}
+        if (collision.gameObject.tag == "dice")
+        {
+            isGrounded = true;
+        }
+        // Changed to Trigger so needs to be modified
+      //  if (collision.gameObject.tag == "Finish")
+      //  {
+      //      isFinished = true;
+      //      RB.AddForce(0, 1000, 0);
+      //  }
+    }
 
 	private void OnCollisionExit(Collision collision)
 	{
@@ -82,5 +92,6 @@ public class cubeMover : MonoBehaviour
         {
             isGrounded = false;
         }
+
     }
 }

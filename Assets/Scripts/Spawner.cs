@@ -14,6 +14,8 @@ public class Spawner : MonoBehaviour
 
     public int Frequency;
 
+    public bool diceScene;
+
     private void resetTimer() {
         timeRemaining = Frequency;
     }
@@ -25,7 +27,13 @@ public class Spawner : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
+
     {
+		if (diceScene)
+		{
+            global.allDice = new GameObject();
+            
+		}
     }
 
     // Update is called once per frame
@@ -45,7 +53,12 @@ public class Spawner : MonoBehaviour
         } else {
             resetTimer();
             Prefab = utility.randomdice();
-            Instantiate(Prefab, transform.position, Quaternion.identity);
+			if (diceScene)
+			{
+                Prefab.transform.SetParent(global.allDice.transform) ;  //leave this alone
+			}
+            // Instantiate(Prefab, transform.position, Quaternion.identity);
+            Prefab.transform.position = transform.position;
             NumberOfObjectsToSpawn--;
             if (NumberOfObjectsToSpawn <= 0) {
                 reset();
