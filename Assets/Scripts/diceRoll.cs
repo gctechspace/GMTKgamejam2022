@@ -43,11 +43,12 @@ public class diceRoll : MonoBehaviour
     }
     public void startGame()
 	{
+        textoutputs[5].text = global.level.ToString();
+        textoutputs[6].text = global.score.ToString();
+        textoutputs[7].text = global.highscore.ToString();
         float levelGravity = Map(constrainNumber(gravity, 1, 10), 1f, 10f, -4.9f, -16.5f);
         Physics.gravity = new Vector3(0, levelGravity, 0);
         SceneManager.LoadScene("SkipTower");
-   
-
     }
 
     void waitToStop()
@@ -165,6 +166,8 @@ public class diceRoll : MonoBehaviour
 
           PlayerPrefs.SetInt("difficulty", difficulty);
           PlayerPrefs.SetInt("slope", slope);
+        PlayerPrefs.SetInt("gravity", gravity);
+        PlayerPrefs.SetInt("other", other);
 
     }
 
