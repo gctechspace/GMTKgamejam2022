@@ -19,8 +19,19 @@ public class PlatformGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // float heightI = 180 / 360 * 9.6f;
-        generate(item[0], NumberOfObjectsToSpawn, startAngle, platformAngleIncrement, height, platformHieghtIncrement, platformSlope, difficulty);  //platform
+		if(PlayerPrefs.HasKey("difficulty"))
+         {
+            difficulty = PlayerPrefs.GetInt("difficulty", 1);
+            print(PlayerPrefs.GetInt("difficulty", 1));
+         }
+        if (PlayerPrefs.HasKey("difficulty"))
+		{
+            platformSlope = PlayerPrefs.GetInt("slope", 12);
+        }
+
+
+            // float heightI = 180 / 360 * 9.6f;
+            generate(item[0], NumberOfObjectsToSpawn, startAngle, platformAngleIncrement, height, platformHieghtIncrement, platformSlope, difficulty);  //platform
         generate(item[1], 35, startAngle, 45, 2f, getHeightIncrement(45), 0, 1); //torch (difficulty of 1 ALWAYS places an object) 1.2f
         generate(item[2], 7, startAngle, 180, 10.3f, getHeightIncrement(180), 0, 1); //Paddle 4.8f
     }

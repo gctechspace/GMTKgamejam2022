@@ -33,4 +33,11 @@ public static class utility
         mydice.SetActive(true);
         return mydice;
     }
+
+}
+
+public static class global
+{
+    public static GameObject allDice;
+
 }

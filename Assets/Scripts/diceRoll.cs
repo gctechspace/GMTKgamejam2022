@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 public class diceRoll : MonoBehaviour
 {
 
     public Transform diceStart;
-    public GameObject alldice;
+    
     public Transform rollMat;
     public int difficulty;
     public int slope;
@@ -16,17 +17,18 @@ public class diceRoll : MonoBehaviour
 
 	//Difficulty 1-40 = Higher number less stairs
 	//Slope 0-12 = Higher number more ramp/easier
-	private void Start()
+    public void startGame()
 	{
-      /*  GameObject mydice =  Instantiate(utility.randomdice());
-        mydice.transform.position = diceStart.position;*/
-	}
+        SceneManager.LoadScene("SkipTower");
+
+    }
 	public void GetNumbers()
 	{
+
         List<Collider> bestDice = new List<Collider>();
 
         // Enumerate each of the dice
-        foreach (Transform dice in alldice.transform)
+        foreach (Transform dice in global.allDice.transform)
         {
             float bestHeight = 999999f;
             Collider bestCollider = null;
@@ -89,9 +91,22 @@ public class diceRoll : MonoBehaviour
         }
 
         difficulty = diffy.Sum();
+        if(difficulty == 0)
+		{
+            difficulty = 1;
+		}
+        
         slope = slo.Sum();
+        if(slope > 12)
+		{
+            slope = 12;
+		}
+
         gravity = grave.Sum();
         other = Other.Sum();
+
+      //  PlayerPrefs.SetInt("difficulty", difficulty);
+      //  PlayerPrefs.SetInt("slope", slope);
 
     }
 
