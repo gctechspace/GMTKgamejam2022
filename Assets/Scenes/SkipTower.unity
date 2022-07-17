@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6882055, g: 0.59068435, b: 0.46401438, a: 1}
+  m_IndirectSpecularColor: {r: 0.6882057, g: 0.59068507, b: 0.46401533, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -602,8 +602,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: -0.0022306896, y: 0.99186724, z: -0.01755424, w: -0.1260407}
-  m_LocalPosition: {x: 4.080329, y: 1.528, z: 25.624653}
+  m_LocalRotation: {x: -0.0022306873, y: 0.9918673, z: -0.017554251, w: -0.12604056}
+  m_LocalPosition: {x: 4.080328, y: 1.528, z: 25.624653}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2132,7 +2132,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665239047}
   m_LocalRotation: {x: -0, y: 0.16371465, z: -0, w: 0.9865077}
-  m_LocalPosition: {x: 4.080329, y: 1.528, z: 25.624653}
+  m_LocalPosition: {x: 4.080328, y: 1.528, z: 25.624653}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2428,7 +2428,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728815319}
-  m_LocalRotation: {x: -0.00041657654, y: 0.999216, z: 0.010940474, w: 0.038046766}
+  m_LocalRotation: {x: -0.00041657817, y: 0.999216, z: 0.010940476, w: 0.038046893}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3527,7 +3527,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227790281}
-  m_LocalRotation: {x: 0.0006732929, y: 0.9991194, z: -0.017682595, w: 0.03804308}
+  m_LocalRotation: {x: 0.0006732964, y: 0.9991194, z: -0.017682599, w: 0.03804324}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5180,7 +5180,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2.36, y: 1, z: 2.66}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1972844846
 MeshRenderer:
@@ -5271,7 +5271,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988923740}
-  m_LocalRotation: {x: 0.0017698538, y: 0.9981943, z: -0.046481367, w: 0.038007844}
+  m_LocalRotation: {x: 0.0017698612, y: 0.9981943, z: -0.04648137, w: 0.038008004}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
