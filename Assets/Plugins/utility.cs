@@ -44,7 +44,8 @@ public static class utility
                 mydice = utility.dicelist.Next();
                 if (mydice is object)
                 {
-                    mydice.transform.localPosition = new Vector3(3f, 3f, 9f);
+                    mydice.transform.localPosition = new Vector3(0f, 0f, 0f);
+                    mydice.transform.position = new Vector3(0f, 50f, -4f);
                     mydice.transform.rotation = Quaternion.Euler(utility.random(0, 360), utility.random(0, 360), 0);
                     mydice.transform.GetComponent<Renderer>().material.color = utility.colourlist.Next();
                     mydice.SetActive(true);
