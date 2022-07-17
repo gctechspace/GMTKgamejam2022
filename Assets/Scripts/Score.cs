@@ -30,11 +30,17 @@ public class Score : MonoBehaviour
     void Update()
     {
 
-        score = (int) player.position.y * diff;
+        score = (int)player.position.y * diff + (int)((1000 - global.health) / 100f);
+        if (score < global.bankedscore)
+        {
+            score = global.bankedscore;
+        }
+        global.score = score;
+
         scoreOutput.text = score.ToString();
         if(score > highScore)
 		{
-            highScore = score;
+            highScore = global.bankedscore + score;
             highscorescoreOutput.text = highScore.ToString();
             PlayerPrefs.SetFloat("highscore", highScore);
         }

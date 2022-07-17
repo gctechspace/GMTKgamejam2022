@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -17,17 +18,35 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         Slider.value = Level;
+        global.health = Level;
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+         if (other.gameObject.tag == "Finish")
+        {
+
+            Debug.Log("Level Complete" );
+            Level = 1000;
+            global.health = 1000;
+            global.level++;
+            global.bankedscore += global.score;
+            SceneManager.LoadScene("tower 1");
+        }
+    }
+
 
     void OnCollisionEnter(Collision collision)
     {
+
+
         int m = (int)collision.relativeVelocity.magnitude;
 
         //Debug.Log("Collided with: " + collision.gameObject.tag);

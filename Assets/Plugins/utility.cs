@@ -47,5 +47,9 @@ public static class utility
 public static class global
 {
     public static GameObject allDice;
+    public static int health;
+    public static int score;
+    public static int level=0;
+    public static int bankedscore=0;
 
 }
