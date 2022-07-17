@@ -38,6 +38,7 @@ public class Health : MonoBehaviour
             global.health = 1000;
             global.level++;
             global.bankedscore += global.score;
+            
             SceneManager.LoadScene("tower 1");
         }
     }
