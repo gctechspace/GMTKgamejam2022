@@ -30,7 +30,7 @@ public class diceRoll : MonoBehaviour
 
         textoutputs[5].text = global.level.ToString();
         textoutputs[6].text = global.score.ToString();
-      //  textoutputs[7].text = global.highscore.ToString();
+        textoutputs[7].text = global.highscore.ToString();
 
     }
 	public void startGame()
