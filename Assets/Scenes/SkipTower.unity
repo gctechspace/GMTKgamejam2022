@@ -601,7 +601,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: -0.0022306899, y: 0.99186724, z: -0.017554238, w: -0.1260407}
+  m_LocalRotation: {x: -0.0022306896, y: 0.99186724, z: -0.01755424, w: -0.1260407}
   m_LocalPosition: {x: 4.080329, y: 1.528, z: 25.624653}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2992,7 +2992,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227790281}
-  m_LocalRotation: {x: 0.00067329314, y: 0.9991194, z: -0.017682593, w: 0.03804308}
+  m_LocalRotation: {x: 0.0006732929, y: 0.9991194, z: -0.017682595, w: 0.03804308}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4538,7 +4538,7 @@ PrefabInstance:
     - target: {fileID: 5023743268931036960, guid: d9f4523aa6acb4344ad4be3aa2d95922,
         type: 3}
       propertyPath: jumpForce
-      value: 250
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 5023743268931036960, guid: d9f4523aa6acb4344ad4be3aa2d95922,
         type: 3}
