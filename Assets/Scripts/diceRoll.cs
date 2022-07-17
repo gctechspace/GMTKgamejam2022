@@ -27,11 +27,16 @@ public class diceRoll : MonoBehaviour
 	private void Start()
 	{
         startButtion.interactable = false;
-	}
+
+        textoutputs[5].text = global.level.ToString();
+        textoutputs[6].text = global.score.ToString();
+      //  textoutputs[7].text = global.highscore.ToString();
+
+    }
 	public void startGame()
 	{
         SceneManager.LoadScene("SkipTower");
-   
+        
 
     }
 
@@ -150,6 +155,8 @@ public class diceRoll : MonoBehaviour
 
           PlayerPrefs.SetInt("difficulty", difficulty);
           PlayerPrefs.SetInt("slope", slope);
+        PlayerPrefs.SetInt("gravity", gravity);
+        PlayerPrefs.SetInt("other", other);
 
     }
 
