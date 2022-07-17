@@ -23,7 +23,7 @@ public class Bomb : MonoBehaviour
             c.Level -= Damage;
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(500, transform.position, 1000, 10);
+            collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(10, transform.position, 10, 1, ForceMode.VelocityChange);
         }
     }
 }
