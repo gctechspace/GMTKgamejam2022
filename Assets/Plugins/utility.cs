@@ -48,6 +48,7 @@ public static class utility
                     mydice.transform.rotation = Quaternion.Euler(utility.random(0, 360), utility.random(0, 360), 0);
                     mydice.transform.GetComponent<Renderer>().material.color = utility.colourlist.Next();
                     mydice.SetActive(true);
+                    utility.playclip(3);
                 }
             }
            
@@ -75,5 +76,6 @@ public static class global
     public static float gravity = 0;
     public static int difficulty = 0;
     public static int other = 0;
-
+    public static bool death = false;
+    public static bool winner = false;
 }
