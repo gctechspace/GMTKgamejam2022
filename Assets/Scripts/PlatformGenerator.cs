@@ -16,6 +16,13 @@ public class PlatformGenerator : MonoBehaviour
     private int startAngle = -120; // Starts the objects on the right side of the dice tower
     private float height = 0.2f; // platform Start height
 
+    public static int constrainNumber(int value, int high, int low)
+    {
+        if (value >= high) return high;
+        if (value <= low) return low;
+        return value;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +33,7 @@ public class PlatformGenerator : MonoBehaviour
          }
         if (PlayerPrefs.HasKey("difficulty"))
 		{
-            platformSlope = PlayerPrefs.GetInt("slope", 12);
+            platformSlope = constrainNumber(PlayerPrefs.GetInt("slope", 12), 4, 12);
         }
 
 
