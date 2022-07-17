@@ -146,6 +146,7 @@ public class diceRoll : MonoBehaviour
         textoutputs[3].text = other.ToString();
 
         startButtion.interactable = true;
+        textoutputs[4].text = "Start";
 
           PlayerPrefs.SetInt("difficulty", difficulty);
           PlayerPrefs.SetInt("slope", slope);
