@@ -32,8 +32,9 @@ public class Spawner : MonoBehaviour
 		if (diceScene)
 		{
             global.allDice = new GameObject();
-            
-		}
+            DontDestroyOnLoad(global.allDice);
+
+        }
     }
 
     // Update is called once per frame
