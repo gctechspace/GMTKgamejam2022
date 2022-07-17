@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 public class diceRoll : MonoBehaviour
 {
 
@@ -13,15 +15,47 @@ public class diceRoll : MonoBehaviour
     public int slope;
     public int gravity;
     public int other;
+    int stopped = 0;
+    
 
+    public TextMeshProUGUI[] textoutputs;
+    public Button startButtion;
 
 	//Difficulty 1-40 = Higher number less stairs
 	//Slope 0-12 = Higher number more ramp/easier
-    public void startGame()
+
+	private void Start()
+	{
+        startButtion.interactable = false;
+	}
+	public void startGame()
 	{
         SceneManager.LoadScene("SkipTower");
+   
 
     }
+
+    void waitToStop()
+	{
+		foreach (Transform dice in global.allDice.transform)
+		{
+            Rigidbody DRB =  dice.GetComponent<Rigidbody>();
+            if(DRB.velocity.magnitude < 0.05f && dice.transform.position.y < 1f)
+			{
+                stopped++;
+			}
+		}
+	}
+
+	private void Update()
+	{
+        waitToStop();
+		if(stopped == 6)
+		{
+            GetNumbers();
+            stopped++;
+		}
+	}
 	public void GetNumbers()
 	{
 
@@ -96,17 +130,25 @@ public class diceRoll : MonoBehaviour
             difficulty = 1;
 		}
         
+        
         slope = slo.Sum();
         if(slope > 12)
 		{
             slope = 12;
 		}
-
+ 
         gravity = grave.Sum();
         other = Other.Sum();
 
-      //  PlayerPrefs.SetInt("difficulty", difficulty);
-      //  PlayerPrefs.SetInt("slope", slope);
+        textoutputs[0].text = difficulty.ToString();
+        textoutputs[1].text = slope.ToString();
+        textoutputs[2].text = gravity.ToString();
+        textoutputs[3].text = other.ToString();
+
+        startButtion.interactable = true;
+
+          PlayerPrefs.SetInt("difficulty", difficulty);
+          PlayerPrefs.SetInt("slope", slope);
 
     }
 
