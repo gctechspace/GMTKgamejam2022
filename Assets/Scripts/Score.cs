@@ -18,6 +18,7 @@ public class Score : MonoBehaviour
         {
             highscorescoreOutput.text = PlayerPrefs.GetInt("highscore", 0).ToString();
             highScore = PlayerPrefs.GetInt("highscore", 0);
+            global.highscore = highScore;
         }
 		else
 		{
@@ -39,8 +40,9 @@ public class Score : MonoBehaviour
 
         scoreOutput.text = score.ToString();
         if(score > highScore)
-		{
+        {
             highScore = global.bankedscore + score;
+            global.highscore = highScore;
             highscorescoreOutput.text = highScore.ToString();
             PlayerPrefs.SetFloat("highscore", highScore);
         }

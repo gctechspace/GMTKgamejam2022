@@ -35,10 +35,14 @@ public static class utility
 
     public static GameObject randomdice() {
         GameObject mydice = utility.dicelist.Next();
-        mydice.transform.localPosition = new Vector3(3f, 3f, 9f);
-        mydice.transform.rotation = Quaternion.Euler(utility.random(0, 360), utility.random(0, 360), 0);
-        mydice.transform.GetComponent<Renderer>().material.color = utility.colourlist.Next();
-        mydice.SetActive(true);
+        if (mydice is object)
+        {
+            mydice.transform.localPosition = new Vector3(3f, 3f, 9f);
+            mydice.transform.rotation = Quaternion.Euler(utility.random(0, 360), utility.random(0, 360), 0);
+            mydice.transform.GetComponent<Renderer>().material.color = utility.colourlist.Next();
+            mydice.SetActive(true);
+        }
+        
         return mydice;
     }
 
@@ -49,7 +53,11 @@ public static class global
     public static GameObject allDice;
     public static int health;
     public static int score;
+    public static int highscore;
     public static int level=0;
-    public static int bankedscore=0;
+    public static int bankedscore = 0;
+    public static float gravity = 0;
+    public static int difficulty = 0;
+    public static int other = 0;
 
 }
