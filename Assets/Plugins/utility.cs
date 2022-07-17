@@ -8,6 +8,8 @@ public static class utility
 
     public static Neotek.WeightedList<GameObject> dicelist = new Neotek.WeightedList<GameObject>();
     public static Neotek.WeightedList<Color> colourlist = new Neotek.WeightedList<Color>();
+    public static Neotek.WeightedList<AudioClip> audioclips = new Neotek.WeightedList<AudioClip>();
+    public static AudioSource audiosource;
 
     public static Color StringToColor(string colorStr)
     {
@@ -25,6 +27,12 @@ public static class utility
         return (UnityEngine.Random.value > 0.5f);
     }
 
+    //public static void playclip(int index)
+    //{
+    //    audiosource.pitch = 1;
+    //    audiosource.PlayOneShot(audioclips.Items[index]);
+    //}
+
     public static GameObject randomdice() {
         GameObject mydice = utility.dicelist.Next();
         mydice.transform.localPosition = new Vector3(3f, 3f, 9f);
@@ -39,5 +47,9 @@ public static class utility
 public static class global
 {
     public static GameObject allDice;
+    public static int health;
+    public static int score;
+    public static int level=0;
+    public static int bankedscore=0;
 
 }
