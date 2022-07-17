@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6882057, g: 0.59068507, b: 0.46401533, a: 1}
+  m_IndirectSpecularColor: {r: 0.6882055, g: 0.59068435, b: 0.46401438, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -601,7 +601,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: -0.00223069, y: 0.99186724, z: -0.01755424, w: -0.1260407}
+  m_LocalRotation: {x: -0.0022306899, y: 0.99186724, z: -0.017554238, w: -0.1260407}
   m_LocalPosition: {x: 4.080329, y: 1.528, z: 25.624653}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1701,7 +1701,7 @@ MonoBehaviour:
   Prefab: {fileID: 1305766353}
   NumberOfObjectsToSpawn: 10
   Frequency: 5
-  diceScene: 0
+  diceScene: 1
 --- !u!4 &657843307
 Transform:
   m_ObjectHideFlags: 0
@@ -2992,7 +2992,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227790281}
-  m_LocalRotation: {x: 0.0006732929, y: 0.9991194, z: -0.017682595, w: 0.03804308}
+  m_LocalRotation: {x: 0.00067329314, y: 0.9991194, z: -0.017682593, w: 0.03804308}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
