@@ -59,5 +59,6 @@ public static class global
     public static float gravity = 0;
     public static int difficulty = 0;
     public static int other = 0;
-
+    public static bool death = false;
+    public static bool winner = false;
 }

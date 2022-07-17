@@ -26,6 +26,10 @@ public class diceRoll : MonoBehaviour
 
 	private void Start()
 	{
+        Time.timeScale = 1f;
+        global.winner = false;
+      
+        global.death = false;
         startButtion.interactable = false;
 
         textoutputs[5].text = global.level.ToString();

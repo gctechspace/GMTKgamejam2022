@@ -14,7 +14,9 @@ public class Health : MonoBehaviour
     public AudioSource tick;
     public AudioSource ouch;
     public AudioSource explosion;
-
+    public GameObject win;
+    public GameObject lose;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,19 +28,48 @@ public class Health : MonoBehaviour
     {
         Slider.value = Level;
         global.health = Level;
+        if(global.health <= 0)
+		{
+            global.death = true;
+		}
+
+		if (global.winner)
+		{
+            win.SetActive(true);
+            Time.timeScale = 0.1f;
+        }
+
+		if (global.death)
+		{
+            lose.SetActive(true);
+            Time.timeScale = 0.1f;
+        }
+    }
+    public void nextLevel() 
+    {
+        Debug.Log("Level Complete");
+        Level = 1000;
+        global.health = 1000;
+        global.level++;
+        global.bankedscore += global.score;
+
+        SceneManager.LoadScene("tower 1");
     }
 
+    public void died()
+	{
+        global.health = 1000;
+        global.score = 0;
+        global.level = 1;
+        SceneManager.LoadScene("tower 1");
+
+    }
     void OnTriggerEnter(Collider other)
     {
          if (other.gameObject.tag == "Finish")
         {
-
-            Debug.Log("Level Complete" );
-            Level = 1000;
-            global.health = 1000;
-            global.level++;
-            global.bankedscore += global.score;
-            SceneManager.LoadScene("tower 1");
+            global.winner = true;
+      
         }
     }
 
