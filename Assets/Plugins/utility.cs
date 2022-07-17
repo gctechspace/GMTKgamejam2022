@@ -27,11 +27,11 @@ public static class utility
         return (UnityEngine.Random.value > 0.5f);
     }
 
-    //public static void playclip(int index)
-    //{
-    //    audiosource.pitch = 1;
-    //    audiosource.PlayOneShot(audioclips.Items[index]);
-    //}
+    public static void playclip(int index) 
+    {
+        audiosource.pitch = 1;
+        audiosource.PlayOneShot(audioclips.Items[index]);
+    }
 
     public static GameObject randomdice() {
         GameObject mydice = utility.dicelist.Next();
