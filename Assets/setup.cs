@@ -11,6 +11,11 @@ public class setup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        utility.dicelist.Clear();
+        utility.colourlist.Clear();
+        utility.audioclips.Clear();
+
         foreach (Transform c in Dice.transform)
         {
             utility.dicelist.Add(c.gameObject, 1);
