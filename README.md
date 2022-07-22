@@ -1,5 +1,9 @@
 # GC TechSpace entry for the GMTK Game Jam
 
+Status Compleated 
+
+Our Entry [entry](https://gctechspace.itch.io/tower-of-dies)
+
 Participants
 * Heath
 * Jerome
@@ -37,11 +41,11 @@ Participants
   - Debug Game
   - Submit Final
   
-# Game Overview
+# Event Overview
 
 ---
 
-Readme status: Incomplete  
+
 ## When:  Saturday July 16th, 02:30AM to Monday July 18th, 02:30AM -48 hours -
 ### NOTE* We will be starting at a reasonable time on Saturday morning and finishing late Sunday.  Team members are welcome to come and go over the weekend.
 
